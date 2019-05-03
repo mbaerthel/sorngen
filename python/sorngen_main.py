@@ -28,12 +28,12 @@ print("##")
 print("###################################################")
 
 ## 0/ check for existing folder structure
-if not os.path.exists(".\VHDL"):
+if not os.path.exists("./VHDL"):
 	# create subfolder ".\VHDL"
-	os.makedirs(".\VHDL")
-if not os.path.exists(".\VHDL\VHDLbasic"):
-	# create subfolder ".\VHDL\VHDLbasic"
-	os.makedirs(".\VHDL\VHDLbasic")
+	os.makedirs("./VHDL")
+if not os.path.exists("./VHDL/VHDLbasic"):
+	# create subfolder "./VHDL/VHDLbasic"
+	os.makedirs("./VHDL/VHDLbasic")
 
 ## 1/ read data
 # 1.1/ initialize global sorngen environment
