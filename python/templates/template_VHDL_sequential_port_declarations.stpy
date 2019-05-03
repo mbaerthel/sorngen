@@ -1,0 +1,2 @@
+clk : in std_logic;
+arst_n : in std_logic;

@@ -1,0 +1,2 @@
+clk => clk,
+arst_n => arst_n,

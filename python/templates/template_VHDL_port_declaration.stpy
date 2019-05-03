@@ -1,0 +1,1 @@
+$portname : $direction std_logic_vector($uppervalue downto $lowervalue)

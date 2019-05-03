@@ -1,0 +1,9 @@
+entity $entityname is
+       port(
+       -- input port(s)
+       $inputports
+       -- output port(s)
+       $outputports
+       );
+end $entityname;
+

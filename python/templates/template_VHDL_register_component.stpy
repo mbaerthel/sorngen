@@ -1,0 +1,13 @@
+component REG is
+       generic(
+       DWIDTH : integer
+       );
+       port(
+       -- input ports
+       clk : IN std_logic;
+       arst_n : IN std_logic;
+       input0 : IN std_logic_vector(DWIDTH-1 downto 0);
+       -- output port
+       output0 : OUT std_logic_vector(DWIDTH-1 downto 0)
+       );
+end component;

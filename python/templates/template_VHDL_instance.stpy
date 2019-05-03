@@ -1,0 +1,3 @@
+$instancename : $componentname port map(
+       $portassignment
+       );
