@@ -1,6 +1,6 @@
 -----------------------------------------------
 -- SORN VHDL FUNCTION GENERATOR 
--- Engine: 		v1.0
+-- Engine: 		0.1
 -- Filename: 	"#filename"
 -- Author: 		#author
 -- Info: 		#info
