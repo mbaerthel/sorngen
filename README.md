@@ -37,7 +37,7 @@ With a valid specification file "SPEC.sorn" the tool can be executed with:
 	
 Outputs:
 
-The folder ".\VHDL" contains all the created VHDL files including submodules and the toplevel file. The basic arithmetic SORN modules are are stire in the subfolder ".\VHDL\VHDLbasic".
+The folder ".\VHDL" contains all the created VHDL files including submodules and the toplevel file. The basic arithmetic SORN modules are are stored in the subfolder ".\VHDL\VHDLbasic".
 
 
 
