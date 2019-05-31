@@ -1,0 +1,14 @@
+CHANGELOG sorngen
+
+05-31-19 Revision 1
+
+BUGFIXES: 
+1/ In the SORN syntax tree (SST), the root node of each equation has been the assignment operator and the assigned variable has been stored in a extra lvalue sibling nodes. Now, the lvalue is directly denoted within the root node; the lvalue sibling has been removed.
+2/ An irregular automated pipeline register insertion has occurred each time three or more equations have been taken into account within the specification file. This issue has been solved.
+
+Minor changes: 
+3/ Template filenames for SORN functions and architectures have been aligned. The filename prefix "template_" has been removed and the postfix ".tpl" has been set to '.stpy'.
+4/ "sorngen_write2VHDL.py" is integrated into the existing "sorngen_writeToFile.py" file generator engine. "sorngen_write2VHDL.py" is removed. The commentary style has been aligned
+
+Major changes:
+1/ The tool now supports manually defined datatypes. "sorngen_defineSORN.py" has been modified accordingly. See file "MIMO_solver_N2.sorn" for an example.
