@@ -1,0 +1,22 @@
+@Name MIMO_solver_N2
+#@datatype ["lin","[0,1,1/5]","Zero","infty","negative"]
+@datatype ["man","{[-inf,-2);[-2,-1.5);[-1.5,-1);[-1,-0.75);[-0.75,-0.5);[-0.5,-0.5];(-0.5,-0.25);[-0.25,0);[0,0];(0,0.25];(0.25,0.5);[0.5,0.5];(0.5,0.75];(0.75,1];(1,1.5];(1.5,2];(2,inf]}"]
+@pipeline 2
+
+
+################## Function Definition: ###################
+
+### H*s
+Hs0_re = ((H00_re*s0_re)-(H00_im*s0_im))+((H01_re*s1_re)-(H01_im*s1_im))
+Hs1_re = ((H10_re*s0_re)-(H10_im*s0_im))+((H11_re*s1_re)-(H11_im*s1_im))
+Hs0_im = ((H00_re*s0_im)+(H00_im*s0_re))+((H01_re*s1_im)+(H01_im*s1_re))
+Hs1_im = ((H10_re*s0_im)+(H10_im*s0_re))+((H11_re*s1_im)+(H11_im*s1_re))
+
+### y-H*s
+y_Hs0_re = y0_re - Hs0_re
+y_Hs1_re = y1_re - Hs1_re
+y_Hs0_im = y0_im - Hs0_im
+y_Hs1_im = y1_im - Hs1_im
+
+### ||y-H*s||^2
+squared_norm = (y_Hs0_re**2 + y_Hs0_im**2) + (y_Hs1_re**2 + y_Hs1_im**2)

@@ -1,0 +1,29 @@
+@Name MIMO_solver_N4
+@datatype ["lin","[0,1,1/5]","Zero","infty","negative"]
+@pipeline 6
+
+
+################## Function Definition: ###################
+
+### H*s
+Hs0_re = (((H00_re*s0_re)-(H00_im*s0_im))+((H01_re*s1_re)-(H01_im*s1_im))) + (((H02_re*s2_re)-(H02_im*s2_im))+((H03_re*s3_re)-(H03_im*s3_im)))
+Hs1_re = (((H10_re*s0_re)-(H10_im*s0_im))+((H11_re*s1_re)-(H11_im*s1_im))) + (((H12_re*s2_re)-(H12_im*s2_im))+((H13_re*s3_re)-(H13_im*s3_im)))
+Hs2_re = (((H20_re*s0_re)-(H20_im*s0_im))+((H21_re*s1_re)-(H21_im*s1_im))) + (((H22_re*s2_re)-(H22_im*s2_im))+((H23_re*s3_re)-(H23_im*s3_im)))
+Hs3_re = (((H30_re*s0_re)-(H30_im*s0_im))+((H31_re*s1_re)-(H31_im*s1_im))) + (((H32_re*s2_re)-(H32_im*s2_im))+((H33_re*s3_re)-(H33_im*s3_im)))
+Hs0_im = (((H00_re*s0_im)+(H00_im*s0_re))+((H01_re*s1_im)+(H01_im*s1_re))) + (((H02_re*s2_im)+(H02_im*s2_re))+((H03_re*s3_im)+(H03_im*s3_re)))
+Hs1_im = (((H10_re*s0_im)+(H10_im*s0_re))+((H11_re*s1_im)+(H11_im*s1_re))) + (((H12_re*s2_im)+(H12_im*s2_re))+((H13_re*s3_im)+(H13_im*s3_re)))
+Hs2_im = (((H20_re*s0_im)+(H20_im*s0_re))+((H21_re*s1_im)+(H21_im*s1_re))) + (((H22_re*s2_im)+(H22_im*s2_re))+((H23_re*s3_im)+(H23_im*s3_re)))
+Hs3_im = (((H30_re*s0_im)+(H30_im*s0_re))+((H31_re*s1_im)+(H31_im*s1_re))) + (((H32_re*s2_im)+(H32_im*s2_re))+((H33_re*s3_im)+(H33_im*s3_re)))
+
+### y-H*s
+y_Hs0_re = y0_re - Hs0_re
+y_Hs1_re = y1_re - Hs1_re
+y_Hs2_re = y2_re - Hs2_re
+y_Hs3_re = y3_re - Hs3_re
+y_Hs0_im = y0_im - Hs0_im
+y_Hs1_im = y1_im - Hs1_im
+y_Hs2_im = y2_im - Hs2_im
+y_Hs3_im = y3_im - Hs3_im
+
+### ||y-H*s||^2
+squared_norm = ((y_Hs0_re**2 + y_Hs0_im**2) + (y_Hs1_re**2 + y_Hs1_im**2)) + ((y_Hs2_re**2 + y_Hs2_im**2) + (y_Hs3_re**2 + y_Hs3_im**2))

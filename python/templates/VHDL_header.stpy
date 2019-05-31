@@ -1,0 +1,15 @@
+------------------------------------------------------
+-- SORNGEN VHDL FUNCTION GENERATOR 
+-- Engine: 		$version
+-- Filename: 		$filename
+-- Author: 		$author
+-- Info: 		
+-- $info
+-- (c) $date ITEM University of Bremen
+------------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+

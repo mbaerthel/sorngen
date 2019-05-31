@@ -1,0 +1,15 @@
+architecture $behavior of $archname is     
+
+-- components
+$components
+-- signals
+$signals
+begin
+
+-- instantiation/function
+$instances
+
+-- assignments
+$assignments
+
+end $behavior;

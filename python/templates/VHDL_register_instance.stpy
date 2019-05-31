@@ -1,0 +1,8 @@
+$instancename : REG generic map(
+       DWIDTH => $uppervalue
+       ) 
+       port map(
+       clk => clk,
+       arst_n => arst_n,
+       $portassignment
+       );

@@ -1,0 +1,47 @@
+------------------------------------------------------
+-- SORNGEN VHDL FUNCTION GENERATOR 
+-- Filename: 		REG.vhd
+-- Info: 		
+-- PIPELINE REGISTER TEMPLATE
+-- (c) 2019 ITEM University of Bremen
+------------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity REG is
+       generic(
+       DWIDTH : integer
+       );
+       port(
+       -- input ports
+       clk     : IN std_logic;
+       arst_n  : IN std_logic;
+       input0  : IN std_logic_vector(DWIDTH-1 downto 0);
+       -- output port
+       output0 : OUT std_logic_vector(DWIDTH-1 downto 0)
+       );
+end REG;
+
+architecture behavior of REG is     
+
+-- register declaration
+signal data_r : std_logic_vector(DWIDTH-1 downto 0);
+
+begin
+
+sync: process(clk, arst_n)
+begin
+  if (arst_n = '0') then
+    data_r <= (others =>'0');
+  elsif(clk'event and clk = '1') then
+    data_r <= input0;
+  end if;
+end process sync;
+
+-- assignments
+output0 <= data_r;
+
+end behavior;
